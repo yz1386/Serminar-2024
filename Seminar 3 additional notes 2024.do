@@ -1,7 +1,7 @@
 ************************************************************************************************************
 *Seminar 3 additional notes : Data preparations      @author: Dr. You Zhou, Leeds University Business School
 ************************************************************************************************************
-*Windows system users: Select codes first, then press "CTRL + D" to run them 
+*Window system users: Select codes first, then press "CTRL + D" to run them 
 
 *****************************************************************
 *Note 1: pwd : display the path of the current working directory
