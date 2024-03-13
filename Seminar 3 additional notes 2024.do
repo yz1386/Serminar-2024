@@ -147,6 +147,8 @@ by company: gen bm_lead1_correct=bm[_n+1] /*This is correct to take leads in pan
 ************************************************
 *Note 8: examples for merging/appending datasets
 ************************************************
+*see the merge function manual first
+help merge
 
 *Prepare 4 datasets first
 *str20 tells Stata it is a string variable and that it could be up to 20 characters wide.
