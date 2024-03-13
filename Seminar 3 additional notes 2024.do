@@ -216,6 +216,8 @@ clear all
 use data1.dta,replace
 merge m:1 year using data2
 
+sort company year
+
 *if we keep the matched observations
 keep if _merge == 3
 drop _merge
@@ -223,12 +225,22 @@ drop _merge
 *Dataset 1+ Dataset 2+Dataset 3
 merge 1:1 company year using data3
 
+/*Check these two lines after you already clearly understand the merging process
+merge m:m company year using data3
+merge m:1 company year using data3
+ */
+
+*make it easier to read the data panel
+sort company year
+
 *if we keep the matched observations
 keep if _merge == 3
 drop _merge
 
 *Dataset 1+ Dataset 2+Dataset 3+ Dataset 4
 merge 1:1 company year using data4
+
+sort company year
 
 *if we keep the matched observations
 keep if _merge == 3
