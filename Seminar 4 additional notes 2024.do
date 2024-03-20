@@ -73,12 +73,14 @@ use data1.dta,replace
 merge m:1 year using data2
 keep if _merge == 3
 drop _merge
+sort company year
 
 /*data1+data2+data3*/
 /*Third, we add the liability and ratings (Panel data)*/
 merge 1:1 company year using data3
 keep if _merge == 3
 drop _merge
+sort company year
 
 /*data1+data2+data3+data4*/
 /*Third, we append data of company D, E, F (Panel data)*/
