@@ -151,7 +151,7 @@ capture erase myreg_fix.xls
 reg total_asset bm liability ratings i.year
 outreg2 using myreg_fix.xls, addstat(Adjusted R-squared, e(r2_a))  tstat bdec(2) tdec(2) rdec(2) parenthesis(tstat) append ctitle(title 1)  addtext(control effect 1, Yes, control effect 2,Yes,control effect 3, Yes) label
 reg total_asset bm liability ratings i.firm
-outreg2 using myreg_fix, addstat(Adjusted R-squared, e(r2_a))  tstat bdec(2) tdec(2) rdec(2) parenthesis(tstat) append ctitle(title 2)  addtext(control effect 1, Yes, control effect 2,Yes,control effect 3, Yes) label
+outreg2 using myreg_fix.xls, addstat(Adjusted R-squared, e(r2_a))  tstat bdec(2) tdec(2) rdec(2) parenthesis(tstat) append ctitle(title 2)  addtext(control effect 1, Yes, control effect 2,Yes,control effect 3, Yes) label
 
 
 ************************************************************
