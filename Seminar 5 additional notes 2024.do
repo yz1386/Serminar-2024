@@ -204,15 +204,25 @@ sum total_asset,detail
 
 *2.1.1 Wicloxon signed rank test (one sample)
 
+*find the median value 
+sum total_asset,detail
+*find out the p-value
 signrank total_asset = 0
 
 *two sample test of median
 egen bm_rank = xtile(bm), by(year) nq(2)
 
+*find the median value 
+sum total_asset if bm_rank ==1,detail
+*find out the p-value
 signrank total_asset = 0 if bm_rank ==1
 
+*find the median value 
+sum total_asset if bm_rank ==2,detail
+*find out the p-value
 signrank total_asset = 0 if bm_rank ==2
 
+*Test the difference
 ranksum total_asset, by(bm_rank)
 
 return list
